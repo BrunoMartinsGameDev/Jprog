@@ -14,7 +14,9 @@ from questao12 import questao12
 
 while True:
     questao = input("Digite o numero da questão que deseja revisar(1 a 12): ")
-    if(questao == '0'): break
+    if(questao == '0'): 
+        print("Revisão encerrada")
+        break
     if(questao.isdigit()):
         if(int(questao) >= 1 and int(questao) <= 12):
             match int(questao):
