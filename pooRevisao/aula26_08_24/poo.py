@@ -12,6 +12,7 @@ q1 = Quadrado(10)
 print(q1.calcular_area())
 q1.set_lado(20)
 print(q1.calcular_area())
+
 print('###RETANGULO###')
 r1 = Retangulo(10,5)
 print(r1.calcular_area())
