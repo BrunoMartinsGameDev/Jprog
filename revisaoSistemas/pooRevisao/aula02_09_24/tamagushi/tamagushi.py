@@ -90,7 +90,7 @@ class Tamagushi:
     
     def brincar(self, tempo):
         """Permite brincar com o Tamagushi. O tédio diminui com base no tempo de brincadeira."""
-        self.tedio = max(0, self.tédio - tempo)  # O tédio não pode ser negativo
+        self.tedio = max(0, self.tedio - tempo)  # O tédio não pode ser negativo
     
     def get_nome(self):
         return self.nome
@@ -105,7 +105,7 @@ class Tamagushi:
         return self.idade
     
     def get_tédio(self):
-        return self.tédio
+        return self.tedio
     
     def calcular_humor(self):
         """Calcula o humor com base na fome e saúde, e também considera o tédio."""
