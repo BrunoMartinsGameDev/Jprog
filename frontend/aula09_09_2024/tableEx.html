@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Usuários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .actions {
+            text-align: center;
+        }
+
+        .actions a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 5px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .actions .edit {
+            background-color: #007bff;
+        }
+
+        .actions .delete {
+            background-color: #dc3545;
+        }
+
+        .actions .edit:hover {
+            background-color: #0056b3;
+        }
+
+        .actions .delete:hover {
+            background-color: #c82333;
+        }
+
+        .actions .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Listagem de Usuários</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Nascimento</th>
+                <th>Sexo</th>
+                <th>Estado Civil</th>
+                <th>Interesses</th>
+                <th colspan="2">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>João Silva</td>
+            <td>joao.silva@example.com</td>
+            <td>01/01/1990</td>
+            <td>Masculino</td>
+            <td>Solteiro</td>
+            <td>Futebol, Música</td>
+            <td class="actions">
+                <a href="#" class="edit"><span class="icon">&#9998;</span></a>
+            </td>
+            <td class="actions">
+                <a href="#" class="delete"><span class="icon">&#10060;</span></a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Maria Oliveira</td>
+            <td>maria.oliveira@example.com</td>
+            <td>15/05/1985</td>
+            <td>Feminino</td>
+            <td>Casada</td>
+            <td>Leitura, Cinema</td>
+            <td class="actions">
+                <a href="#" class="edit"><span class="icon">&#9998;</span></a>
+            </td>
+            <td class="actions">
+                <a href="#" class="delete"><span class="icon">&#10060;</span></a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pedro Santos</td>
+            <td>pedro.santos@example.com</td>
+            <td>22/09/1992</td>
+            <td>Masculino</td>
+            <td>Divorciado</td>
+            <td>Viagens, Gastronomia</td>
+            <td class="actions">
+                <a href="#" class="edit"><span class="icon">&#9998;</span></a>
+            </td>
+            <td class="actions">
+                <a href="#" class="delete"><span class="icon">&#10060;</span></a>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+
+</html>

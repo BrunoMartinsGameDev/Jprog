@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .mousePorCima{
+            /* position: absolute; */
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            z-index: 0;
+        }
+        .mousePorCima:hover{
+            background-color: red;
+        }
+        .mousePorCima:active{
+            background-color: blueviolet;
+        }
+        a:visited{
+            background-color: yellow;
+            color: black;
+        }
+        a:link{
+            background-color: black;
+            color: yellow;
+        }
+        input:focus{
+            border: 3px solid red;
+            padding: 10px;
+        }
+        input{
+            color: red;
+        }
+        input::placeholder{
+            color: blue;
+        }
+        /* ul li:first-child{
+            color: red;
+        }
+        ul li:last-child{
+            color: blue;
+        }
+        ul li:nth-child(3){
+            color:rgb(255, 107, 131)
+        }
+        ul li:nth-child(even){
+            color: brown;
+        }
+        ul li:nth-child(odd){
+            color: rgb(0, 219, 77);
+        } */
+        /* ul li:nth-child(5n+1){
+            color: red;
+        }
+        ul li:nth-child(5n){
+            color: red;
+        } */
+        ul li::before{
+            content: " - ";
+            color: red;
+        }
+        p::selection{
+            background-color: pink;
+        }
+        .overflow{
+            overflow:auto;
+        }
+        a{
+            scroll-behavior: smooth;
+        }
+        .absolute{
+            /* position: fixed; */
+            background-color: pink;
+            width: 10%;
+            height: 5%;
+            z-index: 1;
+            margin: 10px;
+        }
+        ul li.sticky{
+            position: sticky;
+            top: 0;
+            background-color: aqua;
+        }
+        @media(max-width:700px){
+            ul li.sticky{
+            position: sticky;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        }
+        @media(max-width:500px){
+            ul li.sticky{
+            position: sticky;
+            top: 0;
+            background-color: rgb(0, 255, 17);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="topo" class="absolute"></div>
+    <div id="topo" class="mousePorCima overflow">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora est maiores sit totam molestias porro placeat, quae id numquam dicta voluptates aspernatur ad soluta dignissimos nulla voluptas dolorem laboriosam error fuga illum possimus sint vero saepe! Suscipit, beatae enim eveniet omnis at neque libero exercitationem, explicabo odio voluptatum dignissimos assumenda, sed magnam veritatis laudantium facere repellat ratione ducimus hic recusandae quidem minima nisi unde. Id maxime dolorem soluta laboriosam sapiente dicta atque, non numquam nihil iusto natus illum consequatur commodi quae est incidunt totam voluptatibus. Eveniet quo, quia impedit doloribus repellendus dolor pariatur accusantium debitis quas, ullam odit dolore et cumque laboriosam consectetur ducimus molestiae earum. Quo saepe aliquam hic aut velit consectetur ex ipsam voluptates officiis cumque non quidem molestiae dicta quam voluptatum, quisquam repudiandae esse laudantium? Ab quisquam sit quia esse consequuntur dolorum doloremque sint odit quasi. Aperiam harum quisquam quos aliquam explicabo amet? Facilis, quae omnis culpa at accusantium nostrum aliquid distinctio natus quidem velit aut. Aliquid maiores laborum quasi quidem aspernatur ea et fugit laboriosam nemo quae magnam velit quia temporibus numquam atque impedit, fugiat exercitationem pariatur! Ullam culpa quas sapiente deserunt architecto magnam excepturi libero, sunt vitae tempore aperiam iure iusto atque odio, voluptatem modi exercitationem quam maxime praesentium corporis distinctio. Minima amet laudantium sed voluptatem modi, nihil commodi alias reiciendis eaque fugit sunt vel exercitationem cupiditate laboriosam a beatae inventore ratione assumenda harum, ipsum facilis quaerat fuga soluta similique? Suscipit temporibus eaque quisquam, dolores, quis, placeat ducimus praesentium possimus facere autem ullam labore totam qui! Quos corrupti hic adipisci expedita, aliquid aspernatur possimus, doloribus asperiores perspiciatis, dolores perferendis natus. Ipsum voluptatum, illum corporis quibusdam sequi dolore suscipit, adipisci voluptatem itaque quam alias dolorum quod distinctio ab neque consequatur obcaecati. Quos omnis ipsum harum vel. Voluptatibus sunt nihil adipisci esse tempore harum obcaecati quos quia iste omnis? Ratione quaerat, cupiditate ex magni, blanditiis eos in provident id modi nobis praesentium temporibus at facilis. Eius reprehenderit magnam placeat vitae excepturi delectus maxime, ea totam aperiam mollitia, illum soluta dolor consectetur error voluptates expedita. Eos tempore facilis doloremque minus ratione a temporibus quasi et voluptate? Quas ut sed modi quisquam mollitia minus illo tempore quaerat laborum, et ab expedita pariatur minima aliquid vel itaque corporis recusandae veniam explicabo fugiat. Vero quam impedit error, reprehenderit tempore laudantium dolorem facilis nisi, porro, ipsa neque et quisquam! Ab temporibus in sit vitae tenetur. Dolore libero sunt, expedita, culpa fugiat soluta minus aspernatur veritatis iste possimus tenetur recusandae quas velit similique quasi quisquam in, laborum nam natus consequatur. Iste provident eos eius fugit reiciendis quibusdam consequuntur maiores. Sapiente enim, deserunt beatae, ratione corporis repellat in nemo vitae corrupti laborum ipsa rem dolorum veritatis, quis tempore totam consequuntur mollitia et. Quam sunt rerum accusantium, ipsum placeat quos cumque aut esse natus consequuntur iure vero, ea quaerat asperiores autem dicta perspiciatis adipisci, animi amet eveniet dolore. Officia harum velit rerum libero eius sit delectus optio itaque cumque atque enim repellendus nobis debitis, quas soluta omnis placeat nam adipisci in ratione iure asperiores ab deserunt? Quasi soluta inventore quis quo illum incidunt ipsam libero nulla deserunt praesentium nostrum dolor odit quas molestias provident eveniet exercitationem nihil numquam magnam, fugit voluptates rerum magni, temporibus delectus! Harum dignissimos debitis, consequatur dolor, tempora a ipsa voluptatum, non animi vitae quisquam officiis ipsum! Laboriosam, est praesentium repudiandae maxime amet, minima id totam ad modi ipsa ex at vitae odio doloribus unde possimus? In totam libero tempora nesciunt temporibus eos expedita modi vitae cupiditate assumenda tenetur placeat, optio molestias laudantium porro eveniet magnam quos, pariatur distinctio nulla quidem vero fuga. Pariatur est mollitia porro nam amet earum error quaerat perspiciatis molestias sed commodi doloribus eaque quae delectus impedit illum dicta, voluptatum repellendus corrupti! Eaque recusandae consectetur error atque tenetur incidunt minus, reiciendis iure dolorum commodi perferendis accusantium eos! Nostrum, magni at? Obcaecati quo deserunt quam, quod quibusdam facilis dolore at corporis. Rerum temporibus doloremque dolore facere quos dolorum amet consectetur provident adipisci, qui aliquid natus obcaecati id harum aperiam molestias quas magnam dignissimos laboriosam beatae quaerat neque corporis recusandae maiores? Eligendi aperiam odit aliquam, dolorem veniam quaerat natus nesciunt, cum, assumenda laboriosam mollitia vero explicabo? Recusandae asperiores error unde consectetur cumque ipsam sequi praesentium alias eveniet magni nemo omnis ducimus inventore amet hic adipisci quod aliquid debitis, aspernatur illum sed? Distinctio voluptates adipisci, temporibus tenetur voluptatum cum maiores atque at quam, aspernatur veniam ex facilis harum repudiandae hic incidunt vel cupiditate inventore, voluptas a? Blanditiis ab, consectetur maiores officiis hic, accusamus asperiores velit doloremque consequatur voluptates repudiandae! Animi reiciendis, neque, rerum perferendis quaerat voluptatibus laboriosam repellat ab ducimus architecto id iure. Distinctio veritatis modi temporibus laborum natus soluta vero sed saepe magnam? Recusandae quae, harum aut consequatur cumque ut corrupti magnam nesciunt explicabo soluta nihil alias laboriosam eligendi blanditiis unde cum accusamus voluptatibus expedita necessitatibus optio doloremque mollitia? Architecto aperiam temporibus magni enim minima provident in iure asperiores rem esse ipsam accusantium consectetur, quis, incidunt ratione, veniam fugit! Provident fuga cum debitis alias recusandae aperiam, et doloremque assumenda ex natus in optio beatae expedita enim quidem, nulla facilis culpa ea cumque aut est similique voluptatem laborum dolorem? Officia quidem, eaque necessitatibus sit minus optio recusandae facilis officiis. Dicta excepturi asperiores labore necessitatibus aliquid! Ad eveniet ullam vel facilis officia ab quam soluta, voluptas similique quasi nihil aperiam beatae eaque eligendi, adipisci est natus quae dolores cupiditate dignissimos eum distinctio nulla minus modi. Fuga necessitatibus provident amet, iusto corrupti, sunt atque, delectus expedita praesentium ipsa nesciunt autem aut incidunt. Sed ullam commodi doloribus omnis minus, deleniti expedita iusto, adipisci ipsa molestias nam suscipit aut nihil. Nihil nostrum ipsam adipisci natus provident facere voluptatem, est vel laboriosam quis deserunt pariatur earum, nesciunt veritatis quibusdam corrupti quo eaque velit culpa quae vero! Dignissimos facilis tenetur fugit, tempore, id autem dolorem quaerat quos dolor quibusdam non eaque! Eos ipsa aliquid voluptatibus excepturi omnis in, nisi fuga provident libero unde quidem, voluptates maiores illo quam? Vero, quos deserunt consequatur non hic vel voluptate ad nostrum veritatis debitis dignissimos quam a voluptatum numquam rem fuga.</div>
+    <br>
+    <a style="scroll-behavior: smooth;" href="#ultimaDiv">aqui</a>
+
+    <br>    
+
+    <input placeholder="texto" type="text">
+    <input type="text">
+    <input type="text">
+
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque hic ad pariatur amet sit nulla eaque ea beatae, quaerat numquam in, dolor maxime! Illo magnam numquam magni velit quae enim?</p>
+    <br>
+    <ul>
+        <li class="sticky">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li class="sticky">7</li>
+        <li>8</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <br>
+    <a href="#topo">topo</a>
+    <div id="ultimaDiv" style="background-color: red; width: 50%; height: 30px;">
+        <div style="background-color: rgb(60, 0, 255); width: 100vw; height: 10px;"></div>
+    </div>
+</body>
+</html>
