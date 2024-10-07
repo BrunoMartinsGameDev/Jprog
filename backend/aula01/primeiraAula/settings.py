@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'api',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+        
+    },
+    'SECURITY_REQUIREMENTS': [
+        {
+            'Bearer': []
+        }
+    ],
+    'USE_SESSION_AUTH': False,
+}
 
 ROOT_URLCONF = 'primeiraAula.urls'
 
