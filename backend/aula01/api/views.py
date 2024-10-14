@@ -1,11 +1,26 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
 from . import models
-from .serializer import LivroSerializer
+from .serializer import LivroSerializer, UserSerializer
 from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser
 
+@swagger_auto_schema(
+    methods=["POST"],
+    request_body=UserSerializer,
+    tags=["token"],
+)
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def register(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response({"username": serializer.data["username"]}, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # Create your views here.
 @swagger_auto_schema(
@@ -16,6 +31,10 @@ from drf_yasg.utils import swagger_auto_schema
 @swagger_auto_schema(
     methods=["GET"],
     tags=["Livroo"],
+    manual_parameters=[
+        openapi.Parameter("pageSize", openapi.IN_QUERY, type=openapi.TYPE_INTEGER),
+        openapi.Parameter("page", openapi.IN_QUERY, type=openapi.TYPE_INTEGER),
+    ],
 )
 @api_view(["GET", "POST"])
 def Livro(request):
@@ -40,6 +59,8 @@ def Livro(request):
 def livroById(request, pk):
     try:
         livro = models.Livro.objects.get(pk=pk)
+        if not request.user.groups.filter(name="admin").exists():
+            return Response({"error": "acesso negado"},status=status.HTTP_403_FORBIDDEN)
     except models.Livro.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
