@@ -112,20 +112,14 @@ WSGI_APPLICATION = 'primeiraAula.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 from decouple import config
-import os
-DB_NAME = config('DB_NAME', default=os.environ.get('DB_NAME', None))
-DB_USER = config('DB_USER', default=os.environ.get('DB_USER', None))
-DB_PASSWORD = config('DB_PASSWORD', default=os.environ.get('DB_PASSWORD', None))
-DB_HOST = config('DB_HOST', default=os.environ.get('DB_HOST', None))
-DB_PORT = config('DB_PORT', default=os.environ.get('DB_PORT', None))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': DB_HOST,
-        'PORT': DB_PORT
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
@@ -162,7 +156,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
+import os
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
