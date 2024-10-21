@@ -22,10 +22,7 @@ ENV DB_PASSWORD=${DB_PASSWORD}
 ENV DB_HOST=${DB_HOST}
 ENV DB_PORT=${DB_PORT}
 
-RUN echo ${DB_NAME}
-RUN echo ${DB_USER}
-RUN echo ${DB_HOST}
-RUN echo ${DB_PORT}
+RUN printenv
 # Coletar arquivos estáticos durante o build
 RUN python manage.py collectstatic --noinput
 
