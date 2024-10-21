@@ -112,21 +112,13 @@ WSGI_APPLICATION = 'primeiraAula.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 from decouple import config
+import dj_database_url
 import os
-DB_NAME = config('DB_NAME', default=os.environ.get('DB_NAME', None))
-DB_USER = config('DB_USER', default=os.environ.get('DB_USER', None))
-DB_PASSWORD = config('DB_PASSWORD', default=os.environ.get('DB_PASSWORD', None))
-DB_HOST = config('DB_HOST', default=os.environ.get('DB_HOST', None))
-DB_PORT = config('DB_PORT', default=os.environ.get('DB_PORT', None))
+DB_URL = config('DB_URL', default=os.environ.get('DB_URL', f'sqlite:///{os.path.join(BASE_DIR, "db.sqlite3")}'))
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': DB_HOST,
-        'PORT': DB_PORT
-    }
+    'default': dj_database_url.config(
+     default=DB_URL   
+    )
 }
 
 # Password validation
